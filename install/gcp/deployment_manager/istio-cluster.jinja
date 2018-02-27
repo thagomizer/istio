@@ -17,6 +17,7 @@ resources:
         oauthScopes:
         - https://www.googleapis.com/auth/logging.write
         - https://www.googleapis.com/auth/monitoring
+        - https://www.googleapis.com/auth/trace.append
 
 - type: runtimeconfig.v1beta1.config
   name: {{ CLUSTER_NAME }}-config
@@ -62,6 +63,7 @@ resources:
         - https://www.googleapis.com/auth/servicecontrol
         - https://www.googleapis.com/auth/service.management.readonly
         - https://www.googleapis.com/auth/userinfo.email
+        - https://www.googleapis.com/auth/trace.append
 
     networkInterfaces:
     - network: https://www.googleapis.com/compute/v1/projects/{{ env["project"] }}/global/networks/default
